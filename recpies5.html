@@ -1,0 +1,243 @@
+<?php
+$c=mysqli_connect('localhost','root','','cook');
+?>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+
+<script src="../PHP/jq/jquery-1.10.2.js"></script>
+<script src="../PHP/jq/jquery.min.js"></script>
+<script src="../PHP/jq/bootstrap.min.js"></script>
+
+<script src="../PHP/jq/jQuery.Validate.min.js"></script>
+<script src="../PHP/jq/jquery.transit.min.js"></script>
+
+<script>
+$(document).ready(function(){
+$("#a").click(function(){
+$(this).transition({scale:1.5});
+});
+$("#zoom").mouseenter(function(){
+$(this).transition({scale:2.0})
+});
+$("#zoom").mouseleave(function(){
+$(this).transition({scale:1.0})
+});
+$("#large").mouseenter(function(){
+$(this).transition({scale:2.0})
+});
+$("#large").mouseleave(function(){
+$(this).transition({scale:1.0})
+});
+});
+</script>
+<style>
+.YSlides
+{
+width:100%;
+height:400px;
+}
+ul
+{
+margin-top:20px;
+margin-bottom:80px;
+margin-left:0px;
+}
+li
+{
+list-style-type:none;
+display:inline;
+font-size:18px;
+padding:30px;
+}
+.link
+{
+color:#003399;
+font-size:12px;
+}
+.link:hover
+{
+text-decoration:none;
+color:#FFFFFF;
+}
+
+</style>
+</head>
+
+
+<body >
+<div class="container-fluid" style="background-color:#FFE8DD">
+  <div class="row">
+    <div class="col-md-4 col-lg-4" style="background-image:url(images/Untitled-1.png); background-size:100% 100%; height:250px"></div>
+	<div class="col-md-8 col-lg-8" style="margin-top:80px">
+	  <div class="col-md-9 col-lg-9">
+	  <form action="#" method="get">
+	  <input type="text" name="search"  placeholder="Search Recipes here" style="width:100%;height:10%">
+	  </form>
+	  </div>
+	  <div class="col-md-3 col-lg-3">
+	  <button type="submit" style="padding:22px;background-color:#000066">
+	  <span class="glyphicon glyphicon-search" style="color:#CCCCCC;font-size:18px">SEARCH</span></button>
+	  </div>
+	</div>
+	
+  </div>
+  <div class="row">
+     <div class="col-md-12 col-lg-12">
+  <img class="YSlides" src="1.jpg">
+  <img class="YSlides" src="2.jpg">
+  <img class="YSlides" src="3.jpg">
+  <img class="YSlides" src="4.jpg">
+      </div>
+
+<script>
+var Slider = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("YSlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    Slider++;
+    if (Slider > x.length) {Slider = 1}    
+    x[Slider-1].style.display = "block";  
+    setTimeout(carousel, 2000);
+}
+</script>
+</div>
+ 
+  <div class="row" style="background-color:#FFE8DD" > 
+    <div class="col-md-2 col-lg-2"></div>
+	<div class="col-md-9 col-lg-9">
+	 <ul class="nav nav-pills">
+        <li class="active"><a href="home.html" style="font-weight:bold;color:#FFFFFF;background-color:#000033"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+	    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="recipes.html" style="font-weight:bold;color:#FFFFFF;background-color:#000033"><span class="glyphicon glyphicon-cutlery "></span>RECIPES<span class="caret"></span></a>
+	    <ul class="dropdown-menu">
+		<li><a href="recipes.html">Ice Tea recipes</a></li>
+		<li><a href="recipes2.html">Summer Delicious recipes</a></li>
+		<li><a href="recipes3.html">Chocolate-bar Inspired recipes</a></li>
+		<li><a href="recipes4.html">Easy Student recipes</a></li>
+		<li><a href="recipes5.html">Vegetarian Curry recipes</a></li>
+		<li><a href="recipes6.html">Watermelon recipes</a></li>
+		</ul>
+	 </li>
+        <li><a href="#" style="font-weight:bold;color:#FFFFFF;background-color:#000033"><span class="glyphicon glyphicon-comment"></span>POST RECIPE</a></li>
+        <li><a href="#" style="font-weight:bold;color:#FFFFFF;background-color:#000033"><span class="glyphicon glyphicon-user"></span>REGISTER</a></li>
+	    <li><a href="#" style="font-weight:bold;color:#FFFFFF;background-color:#000033"><span class="glyphicon glyphicon-hand-up"></span>LOG IN</a></li>
+    </ul>
+  </div>
+  <div class="col-md-1 col-lg-1" ></div>
+  </div>
+  <div class="row" style="background-color:#FFE8DD">
+  <div class="col-md-2 col-lg-2"></div>
+  <div class="col-md-8 col-lg-8" style="font-size:36px;font-weight:bold;color:#2B0000;padding:10px;border-bottom:dotted;line-length:10px;text-align:center"><span class="glyphicon glyphicon-cutlery"></span>VEGETARIAN CURRY RECIPES<span class="glyphicon glyphicon-cutlery"></span></div>
+  <div class="col-md-2 col-lg-2"></div>
+  </div>
+  <div class="row" style="background-color:#FFE8DD">
+    <div class="col-md-2 col-lg-2"></div>
+	<div class="col-md-4 col-lg-4"><span class="glyphicon  glyphicon-cutlery" style="font-size:17px;color:#2B0000;padding:20px;font-weight:bold">MASALA EGG CURRY</span>
+	   <div class="row">
+	     <div class="col-md-12 col-lg-12" style="background-image:url(images/masala-egg-curry-105708-1.jpeg);border:groove #400000 5px;border-radius:40px 0px 40px 0px;background-size:100% 100%;padding:200px"></div>
+	   </div>
+	</div>
+	<div class="col-md-1 col-lg-1"></div>
+	<div class="col-md-3 col-lg-3">
+	    <div class="row">
+		    <div class="col-md-12 col-lg-12" style="padding:20px">
+			   <p style="color:#2B0000;font-size:17px;font-weight:bold">Ingredients:</p>
+			   <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">6 eggs, at room temperature.</span></p>
+               <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">2 tablespoons vegetable oil.</span></p>
+               <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">1 large red onion, halved, thinly sliced.</span></p>
+               <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">1/2 teaspoon ground turmeric.</span></p>
+               <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">1/2 teaspoon chilli powder.</span></p>
+               <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">4cm piece fresh ginger, finely grated.</span></p>
+               <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">1 long green chilli, thinly sliced.</span></p>
+			   <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">270ml can coconut milk</span></p>
+			   <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">150g green beans, trimmed</span></p>
+			   <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">1/2 teaspoon garam masala, toasted</span></p>
+			   <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">Steamed basmati rice, to serve</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2 col-lg-2"></div>
+  </div>
+  <div class="row" style="background-color:#FFE8DD">
+    <div class="col-md-2 col-lg-2"></div>
+	<div class="col-md-8 col-lg-8">
+	   <p style="color:#2B0000;font-size:17px;font-weight:bold">Method of preparation:</p>
+	   <p style="font-size:14px;color:#743A3A;font-weight:bold"><span style="color:#2B0000">•	Step 1</span>
+Place eggs in a saucepan. Cover with cold water. Bring to the boil over high heat, stirring occasionally. Reduce heat to medium. Simmer for 3 minutes. Remove pan from heat. Carefully, transfer eggs to a board. Set aside to cool slightly.</p>
+<p style="font-size:14px;color:#743A3A;font-weight:bold"><span style="color:#2B0000">•	Step 2</span>
+Meanwhile, heat oil in large saucepan over medium heat. Cook onion, stirring, for 7 minutes or until light golden. Add turmeric, chilli powder, ginger and 1/2 the green chilli. Cook, stirring, for 1 minute or until fragrant.<p>
+<p style="font-size:14px;color:#743A3A;font-weight:bold"><span style="color:#2B0000">•	Step 3</span>
+Add coconut milk and 1/2 cup water. Bring to the boil. Reduce heat to low. Simmer for 5 minutes or until liquid reduces by half.</p>
+<p style="font-size:14px;color:#743A3A;font-weight:bold"><span style="color:#2B0000">•	Step 4</span>
+Peel eggs.Add beans, peas and eggs to curry. Cook,stirring,for 1 to 2 minutes or until beans are just tender and eggs are heated through. Cut eggs in half.Sprinkle curry with garam masala, coriander and remaining chilli and serve with rice.</p>
+    </div>
+	<div class="col-md-2 col-lg-2"></div>
+  </div>
+  
+   <div class="row" style="background-color:#FFE8DD">
+    <div class="col-md-2 col-lg-2"></div>
+	<div class="col-md-4 col-lg-4"><span class="glyphicon  glyphicon-cutlery" style="font-size:17px;color:#2B0000;padding:20px;font-weight:bold">POTATO CURRY WITH CHAPAATI</span>
+	   <div class="row">
+	     <div class="col-md-12 col-lg-12" style="background-image:url(images/potato-curry-with-roti-101092-1.jpeg);border:groove #400000 5px;border-radius:40px 0px 40px 0px;background-size:100% 100%;padding:210px"></div>
+	   </div>
+	</div>
+	<div class="col-md-1 col-lg-1"></div>
+	<div class="col-md-3 col-lg-3">
+	    <div class="row">
+		    <div class="col-md-12 col-lg-12" style="padding:20px">
+			   <p style="color:#2B0000;font-size:17px;font-weight:bold">Ingredients:</p>
+			   <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">600g desired potatoes,peeled,cut into 1cm-thick slices.</span></p>
+               <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">1 tablespoon vegetable oil.</span></p>
+               <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">1 red onion, thinly sliced.</span></p>
+               <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">2 garlic cloves, thinly sliced.</span></p>
+               <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">6cm piece fresh ginger, finely grated.</span></p>
+               <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">1 teaspoon cumin seeds.</span></p>
+			   <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">2 teaspoons ground coriander.</span></p>
+			   <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">1/2 teaspoon ground turmeric.</span></p>
+			   <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">1/2 cup fresh coriander sprigs.</span></p>
+			   <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">Mango chilli chutney, to serve.</span></p>
+			   <p><span class="glyphicon glyphicon-paperclip" style="font-size:19px;color:#743A3A">4 chapaatis.</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2 col-lg-2"></div>
+  </div>
+  <div class="row" style="background-color:#FFE8DD;padding:20px">
+    <div class="col-md-2 col-lg-2"></div>
+	<div class="col-md-8 col-lg-8">
+	   <p style="color:#2B0000;font-size:17px;font-weight:bold">Method of preparation:</p>
+	   <p style="font-size:14px;color:#743A3A;font-weight:bold"><span style="color:#2B0000">•	Step 1</span>
+	   Cook potato in a large saucepan of boiling salted water for 2 to 3 minutes or until just tender. Drain</p>
+       <p style="font-size:14px;color:#743A3A;font-weight:bold"><span style="color:#2B0000">•	Step 2</span>
+       Heat oil in a large frying pan over high heat. Add onion, garlic and ginger. Cook, stirring, for 3 minutes or until softened. Stir in seeds, ground coriander and turmeric. Cook,stirring, for 1 minute or until fragrant<p>
+       <p style="font-size:14px;color:#743A3A;font-weight:bold"><span style="color:#2B0000">•	Step 3</span>
+       Add potato and 1/2 cup cold water. Cook for 2 to 3 minutes or until potato is tender and water has evaporated.</p>
+       <p style="font-size:14px;color:#743A3A;font-weight:bold"><span style="color:#2B0000">•	Step 4</span>
+       Meanwhile, heat roti following packet directions.Place chapaatis on serving plates. Cover half of each roti with potato filling. Dollop with yoghurt and top with coriander. Fold roti over to cover filling.Serve with chutney and sprinkled with extra coriander.</p>
+    </div>
+	<div class="col-md-2 col-lg-2"></div>
+  </div>
+  
+  <ul class="pager">
+    <li><a href="recipes4.html"  style="font-weight:bold;color:#FFFFFF;background-color:#000033" id="zoom">Previous</a></li>
+    <li><a href="recipes6.html"  style="font-weight:bold;color:#FFFFFF;background-color:#000033" id="large">Next</a></li>
+</ul>		
+  
+  <div class="row" style="background-color:#FFE8DD">
+      <div class="col-md-12 col-lg-12">
+	  <p style="font-family:Trebuchet MS;color:#000033;font-size:13px;text-align:center;padding:2px">
+	©2017 All Rights Reserved. </p>
+	<p style="font-family:Trebuchet MS;color:#000033;font-size:13px;text-align:center;color:#000033;padding:1px"> Privacy Policy | Relevant Ads Opt-Out | Cookie Policy | Advertise | Legal Notices</p>
+	 
+	  </div>
+	</div>  
+  </div>
+</div> 
+</body>
+</html>

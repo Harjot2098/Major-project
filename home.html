@@ -1,0 +1,232 @@
+<?php
+?>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+
+<script src="../PHP/jq/jquery-1.10.2.js"></script>
+<script src="../PHP/jq/jquery.min.js"></script>
+<script src="../PHP/jq/bootstrap.min.js"></script>
+
+<script src="../PHP/jq/jQuery.Validate.min.js"></script>
+<script src="../PHP/jq/jquery.transit.min.js"></script>
+
+<script>
+$(document).ready(function(){
+$("#a").click(function(){
+$(this).transition({scale:1.5});
+});
+
+$("#b").mouseenter(function(){
+$(this).transition({skewY:'30deg'})
+});
+$("#b").mouseleave(function(){
+$(this).transition({skewY:'0deg'});
+});
+$("#c").mouseenter(function(){
+$(this).transition({skewY:'30deg'});
+});
+$("#c").mouseleave(function(){
+$(this).transition({skewY:'0deg'});
+});
+$("#d").mouseenter(function(){
+$(this).transition({skewY:'30deg'});
+});
+$("#d").mouseleave(function(){
+$(this).transition({skewY:'0deg'});
+});
+$("#e").mouseenter(function(){
+$(this).transition({skewY:'30deg'});
+});
+$("#e").mouseleave(function(){
+$(this).transition({skewY:'0deg'});
+});
+$("#large").mouseenter(function(){
+$(this).transition({scale:2.0})
+});
+$("#large").mouseleave(function(){
+$(this).transition({scale:1.0})
+});
+
+});
+</script>
+<style>
+.YSlides
+{
+width:100%;
+height:450px;
+}
+ul
+{
+margin-top:20px;
+margin-bottom:80px;
+margin-left:0px;
+}
+li
+{
+list-style-type:none;
+display:inline;
+font-size:18px;
+padding:30px;
+}
+.link
+{
+color:#003399;
+font-size:12px;
+}
+.link:hover
+{
+text-decoration:none;
+color:#FFFFFF;
+}
+</style>
+</head>
+
+<body style="margin:0px;background-color:#FFE8DD">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-lg-4" style="background-image:url(images/Untitled-1.png); background-size:100% 100%; height:250px"></div>
+	<div class="col-md-8 col-lg-8" style="margin-top:80px">
+	  <div class="col-md-9 col-lg-9">
+	  <form action="#" method="get">
+	  <input type="text" name="search"  placeholder="Search Recipes here" style="width:100%;height:10%;color:#000000">
+	  </form>
+	  </div>
+	  <div class="col-md-3 col-lg-3">
+	  <button type="submit" style="padding:20px;color:#FFFFFF;background-color:#000033">
+	  <span class="glyphicon glyphicon-search" style="font-size:18px;font-weight:bold">SEARCH</span></button>
+	  </div>
+	</div>
+	
+  </div>
+  <div class="row">
+     <div class="col-md-12 col-lg-12">
+  <img class="YSlides" src="1.jpg">
+  <img class="YSlides" src="2.jpg">
+  <img class="YSlides" src="3.jpg">
+  <img class="YSlides" src="4.jpg">
+      
+
+<script>
+var Slider = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("YSlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    Slider++;
+    if (Slider > x.length) {Slider = 1}    
+    x[Slider-1].style.display = "block";  
+    setTimeout(carousel, 2000);
+}
+</script>
+</div></div>
+ 
+  <div class="row"> 
+    <div class="col-md-1 col-lg-1"></div>
+	<div class="col-md-9 col-lg-9">
+	 <ul class="nav nav-pills nav-pills-fixed">
+     <li class="active"><a href="home.html" style="font-weight:bold;color:#FFFFFF;background-color:#000033"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+	 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="recipes.html" style="font-weight:bold;color:#FFFFFF;background-color:#000033"><span class="glyphicon glyphicon-cutlery"></span>RECIPES<span class="caret"></span></a>
+	    <ul class="dropdown-menu">
+		<li><a href="recipes.html">Ice Tea recipes</a></li>
+		<li><a href="recipes2.html">Summer Delicious recipes</a></li>
+		<li><a href="recipes3.html">Chocolate-bar Inspired recipes</a></li>
+		<li><a href="recipes4.html">Easy Student recipes</a></li>
+		<li><a href="recipes5.html">Vegetarian Curry recipes</a></li>
+		<li><a href="recipes6.html">Watermelon recipes</a></li>
+		</ul>
+	 </li>
+     <li><a href="#" style="font-weight:bold;color:#FFFFFF;background-color:#000033"><span class="glyphicon glyphicon-comment"></span>POST RECIPE</a></li>
+     <li><a href="#" style="font-weight:bold;color:#FFFFFF;background-color:#000033"><span class="glyphicon glyphicon-user"></span>REGISTER</a></li>
+	<li><a href="#" style="font-weight:bold;color:#FFFFFF;background-color:#000033"><span class="glyphicon glyphicon-hand-up"></span>LOG IN</a></li>
+    </ul>
+  </div>
+    <div class="col-md-1 col-lg-1"></div>
+  </div>
+  <div class="row">
+     <div class="col-md-1 col-lg-1" ></div>
+	<div class="col-md-10 col-lg-10">
+	 <div class="row">
+	    <div class="col-md-7 col-lg-7" style="background-image:url(images/duck-in-lettuce-cups-119751-1.jpg);background-image:100% 100%;padding:234px;border-radius:30px 30px 30px 30px"></div>
+	    <div class="col-md-5 col-lg-5" style="background-image:url(images/neven-krcmarek-175838.jpg);background-size:100% 100%;padding:234px;border-radius:30px 30px 30px 30px">
+		</div>
+	 </div>   
+	</div>
+	<div class="col-md-1 col-lg-1"></div>
+	<div class="row">
+	   <div class="col-md-4 col-lg-4"></div>
+	   <div class="col-md-4 col-lg-4" style="font-family:Verdana, Arial, Helvetica, sans-serif;text-alignment:center;color:#000033;font-size:40px;padding:50px"><b><center>TRY THESE!!</center></b></div>
+	   <div class="col-md-4 col-lg-4"></div>
+	</div>   
+	<div class="row">
+	   <div class="col-md-2 col-lg-2"></div>
+	   <div class="col-md-2 col-lg-2" >
+	    <div class="row">
+		  <a href="recipes4.html" class="col-md-12 col-lg-12 " style="border-radius:100%;border:groove 10px;background-image:url(images/imageedit_1_5215501483.png);background-repeat:no-repeat;background-size:100% 100%;padding:100px"></a>
+		</div>
+	   <p style="font-family:Verdana, Arial, Helvetica, sans-serif;font-size:14px;color:#000033; padding:10px; font-weight:bold; text-align:center">This quick and easy, creamy chorizo pasta is the perfect dish for weeknight dinners.</p>
+	    </div>
+	   <div class="col-md-1 col-lg-1"></div>
+	   <div class="col-md-2 col-lg-2"> 
+	      <div class="row">
+		  <a href="recipes2.html" class="col-md-12 col-lg-12" style="border-radius:100%;padding:100px;border:groove 10px;background-image:url(images/imageedit_1_8927459549.png);background-repeat:no-repeat;background-size:100% 100%" ></a>
+		  </div>
+	   <p style="font-family:Verdana, Arial, Helvetica, sans-serif;font-size:14px;color:#000033;padding:10px; font-weight:bold; text-align:center">Matched with a juicy roast,these fun vegie wedges are a crunchier, more delicious way to tasteful day.</p>
+	   </div>
+	   <div class="col-md-1 col-lg-1"></div>
+	   <div class="col-md-2 col-lg-2">
+	      <div class="row">
+		  <a href="recipes3.html" class="col-md-12 col-lg-12" style="border-radius:100%;background-image:url(images/imageedit_1_6623592931.png);border:groove 10px;background-repeat:no-repeat;background-size:100% 100%;padding:100px"></a>
+		  </div>
+	   <p style="font-family:Verdana, Arial, Helvetica, sans-serif;font-size:14px;color:#000033;padding:10px; font-weight:bold; text-align:center">This is a fun tribute to one of our favourite choco bars,Cadbury Cherry Ripe.With sweet fruit,chewy coconut and dark chocolate,its got all the ripe stuff!</p></div>
+	   <div class="col-md-2 col-lg-2"></div>
+	</div>
+	<div class="row" style="background-color:#FFFFFF">
+	   <div class="col-md-2 col-lg-2"></div>
+	   <div class="col-md-3 col-lg-3" style="color:#000033;background-color:#FFFFFF;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:24px;padding:20px;border-radius:30px 0px 30px 0px"><b>ABOUT YUMMYFOODS</b>
+	     <p style="color:#990000;font-size:14px;margin-top:10px">Dear Food lovers,explore recipes here and have wonderful experience with the new dishes according to your taste.</p>
+		 <p style="color:#990000;font-size:14px"> If you want to try something new in your plates and if you are bored of having the same stuff on regular basis and want to try out something new to change your mood and taste,just browse through YUMMYFOODS.</p>
+	   </div>
+	   <div class="col-md-2 col-lg-2"></div>
+	   <div class="col-md-3 col-lg-3" style="padding:20px;background-color:#FBFBFB;color:#000033;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:24px;border-radius:30px 0px 30px 0px"><b>STAY CONNECTED</b>
+	    <p style="font-family:Verdana, Arial, Helvetica, sans-serif;color:#990000;font-size:15px;border-bottom:dotted 2px #576679;padding-bottom:13px;margin-top:10px">Follow us on
+		   <div class="row">
+			    <div class="col-md-1 col-lg-1" style="margin-top:10px" id="b"><img src="images/1487624776_facebook.png"></div>
+				<div class="col-md-1 col-lg-1" style="margin-top:20px" ></div>
+				<div class="col-md-1 col-lg-1" style="margin-top:10px" id="c"><img src="images/1487624838_Twitter.png"></div>
+				<div class="col-md-1 col-lg-1" style="margin-top:10px" ></div>
+				<div class="col-md-1 col-lg-1" style="margin-top:10px" id="d"><img src="images/1487625133_social-instagram-new-square2.png"></div>
+				<div class="col-md-1 col-lg-1" style="margin-top:10px" ></div>
+				<div class="col-md-1 col-lg-1" style="margin-top:10px" id="e"><img src="images/1487627451_gmail_red.png"></div>
+				<div class="col-md-3 col-lg-3" style="margin-top:10px" ></div>
+		    </div>
+			<p style="border-bottom:dotted 2px #576679;margin-top:20px"></p>
+			<p style="font-family:Verdana, Arial, Helvetica,sans-serif;color:#990000;font-size:15px;margin-top:10px;margin-bottom:10px">Send us email</p>
+			<a href="#" class="link"><u>info@yummyfoods.com</u></a>
+			<a href="#" class="link"><u>rec@yummyfoods.com</u></a>
+			<a href="#" class="link"><u>contact@yummyfoods.com</u></a><br>
+			<a href="#" class="link"><u>admin@yummyfoods.com</u></a>
+	   </div>
+	   
+	   <div class="col-md-2 col-lg-2" style="padding:10px"></div>
+	</div>
+	</div> 
+	<ul class="pager">
+    <li><a href="recipes.html"  style="font-weight:bold;color:#FFFFFF;background-color:#000033" id="large">Next</a></li>
+</ul>		
+	<div class="row">
+      <div class="col-md-12 col-lg-12">
+	  <p style="font-family:Trebuchet MS;color:#003399;font-size:13px;text-align:center;background-color:#FFE8DD;color:#000033;padding:2px">
+	©2017 All Rights Reserved. </p>
+	<p style="font-family:Trebuchet MS;color:#003399;font-size:13px;text-align:center;background-color:#FFE8DD;color:#000033;padding:1px"> Privacy Policy | Relevant Ads Opt-Out | Cookie Policy | Advertise | Legal Notices</p>
+	  </div>
+	</div>  
+  </div>	 
+</div>
+</body>
+</html>
